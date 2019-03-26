@@ -7,9 +7,7 @@ branches:
     - /^\d+\.\d+\.\d+$/
 stages:
   - name: compile
-    if: type != push OR branch =~ /^\d+\.\d+\.\d+$/
   - name: deploy
-    if: branch =~ ^\d+\.\d+\.\d+$
 jobs:
   include:
     - stage: pretest
